@@ -3,7 +3,7 @@ import {useForm} from 'react-hook-form';
 import { signup } from "../firebase/auth";
 import axios  from "axios";
 
-function Signup() {
+function Signup(props) {
     const {register , handleSubmit , reset} = useForm();
     const [isLoading, setLoading] = useState(false);
     const [companies,setCompanies] = useState([]);
@@ -25,7 +25,7 @@ function Signup() {
     }
 
     if (newUser) {
-      //props.history.push(`/profile/${newUser.uid}`);
+      props.history.push(`/dashboard`);
     } else {
       setLoading(false);
     }
