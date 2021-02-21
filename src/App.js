@@ -4,19 +4,21 @@ import './firebase/config';
 import './pages/Signup';
 import { Route , Switch , BrowserRouter } from "react-router-dom";
 import Signup from './pages/Signup';
-
+import { UserProvider } from './firebase/UserProvider';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <div className="ui grid container">
-          <Switch>
-             <Route exact path="/signup" component={Signup}/>
-          </Switch>
+    <UserProvider>
+      <BrowserRouter>
+        <div className="App">
+          <div className="ui grid container">
+            <Switch>
+              <Route exact path="/signup" component={Signup}/>
+            </Switch>
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </UserProvider>
     
   );
 }

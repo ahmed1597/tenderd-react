@@ -7,10 +7,10 @@ function Signup() {
     const {register , handleSubmit , reset} = useForm();
     const [isLoading, setLoading] = useState(false);
     const [companies,setCompanies] = useState([]);
-    useEffect(() => {
-        axios.get(process.env.REACT_APP_API_URL+"/company/list")
+    useEffect(async () => {
+        await axios.get(process.env.REACT_APP_API_URL+"/company/list")
         .then(response => setCompanies(response.data));
-      }, []);
+      },[]);
     
 
   const onSubmit = async (data) => {
@@ -73,7 +73,7 @@ function Signup() {
                 <label>
                     Company
                 </label>
-                <select className="ui fluid dropdown" name="company" ref={register}>
+                <select className="ui fluid dropdown" name="companyID" ref={register}>
                 {companies.map((company) => <option key={company.id} value={company.id}>{company.name}</option>)}
                 </select>
             </div>
