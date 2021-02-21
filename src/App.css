@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +31,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui.card.login-card {
+  width: 450px;
+  margin-top: 100px;
+}
+
+.login.button {
+  float: right;
+}
+
+.ui.form input[type=text],
+.ui.form input[type=password],
+.ui.form select {
+  margin-top: 10px;
 }
