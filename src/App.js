@@ -7,6 +7,9 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
+import Companies from './pages/Companies';
+import Company from './pages/Company';
+import Companyedit from './pages/Companyedit';
 import { UserProvider } from './firebase/UserProvider';
 
 function App() {
@@ -45,6 +48,27 @@ function App() {
                     return (
                       userLogged ?
                       <Dashboard /> :
+                      <Redirect to="/login" />
+                    )
+                }}/>
+                <Route exact path="/companies" render={() => {
+                    return (
+                      userLogged ?
+                      <Companies /> :
+                      <Redirect to="/login" />
+                    )
+                }}/>
+                <Route exact path="/company/:id" render={() => {
+                    return (
+                      userLogged ?
+                      <Company /> :
+                      <Redirect to="/login" />
+                    )
+                }}/>
+                <Route exact path="/company/edit/:id" render={() => {
+                    return (
+                      userLogged ?
+                      <Companyedit /> :
                       <Redirect to="/login" />
                     )
                 }}/>

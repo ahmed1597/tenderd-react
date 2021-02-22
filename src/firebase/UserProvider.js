@@ -9,6 +9,7 @@ export const UserProvider = (props) => {
   useEffect(() => {
     const currUser = firebase.auth().onAuthStateChanged(async (user) => {
 
+
       setSession({ loading: false, user});
     });
 
