@@ -15,15 +15,7 @@ const Navmenu = () =>{
                 }}
             >
                 <SideNav.Toggle />
-                <SideNav.Nav defaultSelected="dashboard">
-                    <NavItem eventKey="requests">
-                        <NavIcon>
-                            <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
-                        </NavIcon>
-                        <NavText>
-                            Dashboard
-                        </NavText>
-                    </NavItem>
+                <SideNav.Nav defaultSelected="profile">
                     <NavItem eventKey="requests">
                         <NavIcon>
                             <i className="fa-fw fa fa-list-alt" style={{ fontSize: '1.75em' }} />

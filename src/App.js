@@ -7,6 +7,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
+import Requests from './pages/Requests';
 import Companies from './pages/Companies';
 import Company from './pages/Company';
 import Companyedit from './pages/Companyedit';
@@ -33,21 +34,21 @@ function App() {
               <Route exact path="/signup" render={() => {
                     return (
                       userLogged ?
-                      <Redirect to="/dashboard" /> :
+                      <Redirect to="/profile" /> :
                       <Signup /> 
                     )
                 }}/>
               <Route exact path="/login" render={() => {
                     return (
                       userLogged ?
-                      <Redirect to="/dashboard" /> :
+                      <Redirect to="/profile" /> :
                       <Login /> 
                     )
                 }}/>
-              <Route exact path="/dashboard" render={() => {
+                <Route exact path="/requests" render={() => {
                     return (
                       userLogged ?
-                      <Dashboard /> :
+                      <Requests /> :
                       <Redirect to="/login" />
                     )
                 }}/>
@@ -85,7 +86,7 @@ function App() {
                 render={() => {
                     return (
                       userLogged ?
-                      <Redirect to="/dashboard" /> :
+                      <Redirect to="/profile" /> :
                       <Redirect to="/login" /> 
                     )
                 }}
