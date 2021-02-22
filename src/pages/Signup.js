@@ -2,6 +2,7 @@ import React , {useState , useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import { signup } from "../firebase/auth";
 import axios  from "axios";
+import { Link } from "react-router-dom";
 
 function Signup(props) {
     const {register , handleSubmit , reset} = useForm();
@@ -77,9 +78,13 @@ function Signup(props) {
                 {companies.map((company) => <option key={company.id} value={company.id}>{company.name}</option>)}
                 </select>
             </div>
-            <button className="ui primary button login" type="submit">
-              Sign Up
-            </button>
+            <div className="field actions">
+              <button className="ui primary button" type="submit">
+                Sign Up
+              </button>
+              or
+              <Link to="/login">Login</Link>
+            </div>
           </form>
         </div>
       </div>

@@ -9,10 +9,6 @@ export const UserProvider = (props) => {
   useEffect(() => {
     const currUser = firebase.auth().onAuthStateChanged(async (user) => {
 
-      if (user) {
-        const token = await user.getIdTokenResult();
-      }
-
       setSession({ loading: false, user});
     });
 

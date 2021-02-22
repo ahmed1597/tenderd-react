@@ -53,3 +53,14 @@
 .ui.form select {
   margin-top: 10px;
 }
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  margin-right: 5px;
+}
+
+.actions a {
+  margin-left: 5px;
+}
