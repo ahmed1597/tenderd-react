@@ -18,12 +18,7 @@ const onSubmit = async (data) => {
     } catch (error) {
       console.log(error);
     }
-
-    if (user) {
-      props.history.push(`/dashboard`);
-    } else {
-      setLoading(false);
-    }
+    
 };
 
   const formClassName = `ui form ${isLoading ? 'loading' : ''}`;

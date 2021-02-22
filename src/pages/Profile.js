@@ -5,6 +5,7 @@ import '../firebase/config';
 import axios from "axios";
 import { logout } from '../firebase/auth';
 import { useHistory , Redirect} from 'react-router-dom';
+import Navmenu from "../Navmenu";
 
 const Profile= (props) =>{
     const { user } = useSession();
@@ -61,6 +62,7 @@ const Profile= (props) =>{
 if(userData)
     return (
         <>
+        <Navmenu />
         <div className="login-container">
         <div className="ui card login-card">
             <div className="content">

@@ -24,12 +24,6 @@ function Signup(props) {
     } catch (error) {
       console.log(error);
     }
-
-    if (newUser) {
-      props.history.push(`/dashboard`);
-    } else {
-      setLoading(false);
-    }
   };
 
   const formClassName = `ui form ${isLoading ? 'loading' : ''}`;
